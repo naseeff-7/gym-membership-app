@@ -1,0 +1,5 @@
+/home/aseef_naseef/gym-app/backend/src/main/java/com/gym/membership/service/MemberService.java
+/home/aseef_naseef/gym-app/backend/src/main/java/com/gym/membership/GymMembershipApplication.java
+/home/aseef_naseef/gym-app/backend/src/main/java/com/gym/membership/repository/MemberRepository.java
+/home/aseef_naseef/gym-app/backend/src/main/java/com/gym/membership/controller/MemberController.java
+/home/aseef_naseef/gym-app/backend/src/main/java/com/gym/membership/model/Member.java

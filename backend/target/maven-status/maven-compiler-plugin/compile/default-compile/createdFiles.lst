@@ -1,0 +1,7 @@
+com/gym/membership/repository/MemberRepository.class
+com/gym/membership/controller/MemberController.class
+com/gym/membership/model/Member$MembershipPlan.class
+com/gym/membership/service/MemberService.class
+com/gym/membership/GymMembershipApplication.class
+com/gym/membership/model/Member$MemberStatus.class
+com/gym/membership/model/Member.class

@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: gym-db
+    environment:
+      MYSQL_DATABASE: gymdb
+      MYSQL_ROOT_PASSWORD: gympassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot Backend
+  backend:
+    build: ./backend
+    container_name: gym-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/gymdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: gympassword
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # React Frontend
+  frontend:
+    build: ./frontend
+    container_name: gym-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
