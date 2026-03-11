@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:8100/api";
+const API = "/api";
 
 export default function Dashboard({ setActivePage }) {
   const [stats, setStats] = useState({ total: 0, active: 0, expired: 0, revenue: 0 });

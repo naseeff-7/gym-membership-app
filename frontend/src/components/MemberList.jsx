@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:8100/api";
+const API = "/api";
 
 const DEMO_MEMBERS = [
   { id: 1, name: "Alex Johnson", email: "alex@email.com", phone: "9876543210", plan: "PREMIUM", status: "ACTIVE", age: 28, membershipFee: 1799 },

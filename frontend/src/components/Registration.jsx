@@ -1,5 +1,5 @@
 import { useState } from "react";
-const API = "http://localhost:8100/api";
+const API = "/api";
 const inputStyle = { width: "100%", padding: "12px 16px", background: "#0a0a0a", border: "1px solid #2a2a2a", borderRadius: "3px", color: "#f0f0f0", fontFamily: "Inter, sans-serif", fontSize: "14px", outline: "none" };
 const labelStyle = { display: "block", fontFamily: "Oswald, sans-serif", fontSize: "11px", letterSpacing: "2px", color: "#666", marginBottom: "6px" };
 export default function Registration({ showNotification, setActivePage }) {

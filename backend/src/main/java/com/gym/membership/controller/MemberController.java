@@ -11,19 +11,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/members")
-@CrossOrigin(origins = "http://localhost:5173")  // React dev server
+@CrossOrigin(origins = "*")
 public class MemberController {
 
     @Autowired
     private MemberService memberService;
 
-    // GET all members
     @GetMapping
     public ResponseEntity<List<Member>> getAllMembers() {
         return ResponseEntity.ok(memberService.getAllMembers());
     }
 
-    // GET single member
     @GetMapping("/{id}")
     public ResponseEntity<Member> getMemberById(@PathVariable Long id) {
         return memberService.getMemberById(id)
@@ -31,7 +29,6 @@ public class MemberController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // POST create new member
     @PostMapping
     public ResponseEntity<?> createMember(@Valid @RequestBody Member member) {
         try {
@@ -42,7 +39,6 @@ public class MemberController {
         }
     }
 
-    // PUT update member
     @PutMapping("/{id}")
     public ResponseEntity<?> updateMember(@PathVariable Long id, @Valid @RequestBody Member member) {
         try {
@@ -53,7 +49,6 @@ public class MemberController {
         }
     }
 
-    // DELETE member
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMember(@PathVariable Long id) {
         try {
@@ -64,13 +59,11 @@ public class MemberController {
         }
     }
 
-    // GET members by status
     @GetMapping("/status/{status}")
     public ResponseEntity<List<Member>> getMembersByStatus(@PathVariable Member.MemberStatus status) {
         return ResponseEntity.ok(memberService.getMembersByStatus(status));
     }
 
-    // GET members by plan
     @GetMapping("/plan/{plan}")
     public ResponseEntity<List<Member>> getMembersByPlan(@PathVariable Member.MembershipPlan plan) {
         return ResponseEntity.ok(memberService.getMembersByPlan(plan));

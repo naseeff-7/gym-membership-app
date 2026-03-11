@@ -827,3 +827,6 @@ Hibernate: select m1_0.id,m1_0.address,m1_0.age,m1_0.email,m1_0.emergency_contac
 2026-03-11T09:42:41.014Z  INFO 8636 --- [nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-03-11T09:42:41.016Z  INFO 8636 --- [nio-8100-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 Hibernate: select m1_0.id,m1_0.address,m1_0.age,m1_0.email,m1_0.emergency_contact,m1_0.membership_fee,m1_0.name,m1_0.phone,m1_0.plan,m1_0.status from members m1_0
+2026-03-11T11:01:36.321Z  INFO 8636 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11T11:01:36.866Z  INFO 8636 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-11T11:01:37.408Z  INFO 8636 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
