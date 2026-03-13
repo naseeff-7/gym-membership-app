@@ -45,7 +45,7 @@ export default function Dashboard({ setActivePage }) {
       <div style={{ marginBottom: "40px" }}>
         <div style={{ fontSize: "48px", letterSpacing: "6px", lineHeight: 1 }}>DASHBOARD</div>
         <div style={{ color: "#555", fontFamily: "Inter", fontSize: "13px", marginTop: "6px", letterSpacing: "2px" }}>
-          IRON GYM MEMBERSHIP SYSTEM
+          IRON GYM MEMBERSHIP SYSTEM 0.2
         </div>
       </div>
 
